@@ -20,15 +20,31 @@ export const ProjectsStore = [
     title: "React TCG Game",
     skillsUsed: ["HTML", "CSS", "JS", "React"],
     description: "Juego de combate de cartas creado en React. Creado para explorar el uso de estados, efectos y lógica de juego, con la creación de un sistema de combate.",
-    role: "Programación",
+    role: "Programación Frontend, Game Design",
     project_url: "https://react-tcg.netlify.app/"
   },
   {
     image_url: "/images/project_3.png",
-    title: "React ToDos App",
-    skillsUsed: ["HTML", "CSS", "JS", "React"],
-    description: "Proyecto de aplicación de tareas creado en React. Creado para explorar el uso de estados y efectos en React.",
-    role: "Desarrollo Frontend",
-    project_url: "https://gibsygg.github.io/Intro-React-2.0/"
+    title: "Aventura UNAL",
+    skillsUsed: ["C#", "Unity"],
+    description: "Prototipo de RPG universitario para explorar el campus de la Universidad Nacional de Colombia Sede Medellín.",
+    role: "Programación, Game Design",
+    project_url: "https://gibsydev.site/#nav"
+  },
+  {
+    image_url: "/images/project_5.png",
+    title: "Appterio",
+    skillsUsed: ["React"],
+    description: "Aplicación Movil de gestión de bioterios, con asignación de tareas a diferentes roles de usuario, y gestión de animales para su cuidado.",
+    role: "Desarrollo Movil Frontend",
+    project_url: "https://github.com/GiBsyGG/Appterio-Frontend"
+  },
+  {
+    image_url: "/images/project_6.jpg",
+    title: "Berracos Espantos",
+    skillsUsed: ["C#", "Unity"],
+    description: "Survivor colombiano cooperativo para 1 o 2 jugadores, donde los campesinos Don Pedro y Doña Ana defienden su vereda de los espantos del folclor colombiano.",
+    role: "Programación, Game Design",
+    project_url: "https://kevin-parra.itch.io/berracos-espantos"
   },
 ]
