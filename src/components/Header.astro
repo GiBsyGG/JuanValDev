@@ -1,71 +1,78 @@
 <header id="hero">
-  <p class="header_1">Hola, soy <span class="name">Juan</span>.<p />
-  <p class="header_2">Estudiante de <span class="career">Desarrollo de Software</span>.</p>
-</header>
+  <p class="header_1">
+    Hola, soy <span class="name">Juan Valencia</span>.<p></p>
+    <p class="header_2">
+      Desarrollador de <span class="career">Software</span> y <span
+        class="career">Videojuegos</span
+      >.
+    </p>
+  </p>
 
-<style>
-  header {
-    color: var(--white-light);
-    font-weight: 300;
-    font-size: 5.2rem;
-    letter-spacing: 4px;
-    line-height: 80px;
-    text-align: center;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  p{
-    margin: 0;
-    animation: fadeinheader 2s;
-  }
-
-  .name {
-    color: var(--primary-color);
-    font-weight: 400;
-  }
-
-  .career {
-    color: var(--secondary-color);
-    font-weight: 400;
-  }
-
-  .header_1 {
-    animation: fadeinheaderup 1.6s;
-  }
-
-  .header_2 {
-    animation: fadeinheaderdown 1.6s;
-  }
-
-  @keyframes fadeinheaderup {
-    from { 
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    to   {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeinheaderdown {
-    from { 
-      opacity: 0;
-      transform: translateY(50px);}
-    to   {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media screen and (max-width: 374px){
+  <style>
     header {
-      font-size: 4rem;
-      letter-spacing: 2px;
+      color: var(--white-light);
+      font-weight: 300;
+      font-size: 5.2rem;
+      letter-spacing: 4px;
+      line-height: 80px;
+      text-align: center;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-  }
-</style>
+
+    p {
+      margin: 0;
+      animation: fadeinheader 2s;
+    }
+
+    .name {
+      color: var(--primary-color);
+      font-weight: 400;
+    }
+
+    .career {
+      color: var(--secondary-color);
+      font-weight: 400;
+    }
+
+    .header_1 {
+      animation: fadeinheaderup 1.6s;
+    }
+
+    .header_2 {
+      animation: fadeinheaderdown 1.6s;
+    }
+
+    @keyframes fadeinheaderup {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeinheaderdown {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 374px) {
+      header {
+        font-size: 4rem;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+</header>

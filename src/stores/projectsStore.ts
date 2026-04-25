@@ -1,6 +1,6 @@
 export const ProjectsStore = [
   {
-    image_url: "/images/project_1.png",
+    image_url: "/JuanValDev/images/project_1.png",
     title: "Game Knock it out",
     skillsUsed: ["C#", "Unity"],
     description:
@@ -9,7 +9,7 @@ export const ProjectsStore = [
     project_url: "https://kevin-parra.itch.io/knock-it-out-the-show",
   },
   {
-    image_url: "/images/project_2.png",
+    image_url: "/JuanValDev/images/project_2.png",
     title: "Game Dead's Loot",
     skillsUsed: ["C#", "Unity"],
     description:
@@ -18,7 +18,7 @@ export const ProjectsStore = [
     project_url: "https://gibsygg.itch.io/deads-loot",
   },
   {
-    image_url: "/images/project_4.png",
+    image_url: "/JuanValDev/images/project_4.png",
     title: "React TCG Game",
     skillsUsed: ["HTML", "CSS", "JS", "React"],
     description:
@@ -27,7 +27,7 @@ export const ProjectsStore = [
     project_url: "https://react-tcg.netlify.app/",
   },
   {
-    image_url: "/images/project_3.png",
+    image_url: "/JuanValDev/images/project_3.png",
     title: "Aventura UNAL",
     skillsUsed: ["C#", "Unity"],
     description:
@@ -36,7 +36,7 @@ export const ProjectsStore = [
     project_url: "/#nav",
   },
   {
-    image_url: "/images/project_5.png",
+    image_url: "/JuanValDev/images/project_5.png",
     title: "Appterio",
     skillsUsed: ["React"],
     description:
@@ -45,7 +45,7 @@ export const ProjectsStore = [
     project_url: "https://github.com/GiBsyGG/Appterio-Frontend",
   },
   {
-    image_url: "/images/project_6.jpg",
+    image_url: "/JuanValDev/images/project_6.jpg",
     title: "Berracos Espantos",
     skillsUsed: ["C#", "Unity"],
     description:
