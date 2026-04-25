@@ -33,7 +33,7 @@ export const ProjectsStore = [
     description:
       "Prototipo de RPG universitario para explorar el campus de la Universidad Nacional de Colombia Sede Medellín.",
     role: "Programación, Game Design",
-    project_url: "/#nav",
+    project_url: "https://gibsygg.github.io/JuanValDev",
   },
   {
     image_url: "/JuanValDev/images/project_5.png",
