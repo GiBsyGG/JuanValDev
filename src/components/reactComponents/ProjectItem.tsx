@@ -1,58 +1,65 @@
-import { useStore } from '@nanostores/react'
-import { skillsStore } from '../../stores/skillsStore';
-
-import { AnimatePresence, motion } from "framer-motion"
-
 import styles from "../../styles/ProjectSection.module.css";
-import Image from 'astro/components/Image.astro';
+
 interface ProjectItemProps {
-  image_url: string;
-  title: string;
-  skillsUsed: string[];
-  description: string;
-  role: string;
-  project_url: string;
+  project: {
+    image_url: string;
+    title: string;
+    skillsUsed: string[];
+    description: string;
+    role: string;
+    project_url: string;
+  };
 }
 
-export function ProjectItem({ image_url, title, skillsUsed, description, role, project_url }: ProjectItemProps) {
+export function ProjectItem({ project }: ProjectItemProps) {
+  const { image_url, title, skillsUsed, description, role, project_url } =
+    project;
 
-  const skills = useStore(skillsStore);
-
-  const skillUsedActive = skills.filter((skill) => skillsUsed.find((s) => s === skill.item_title));
-  
   return (
-    <a href={project_url} className={styles.project_card_container} target="_blank" rel="noopener noreferrer">
-      <div className={styles.project_skills}>
-        {skillUsedActive.map((activeSkill) => (
-          <AnimatePresence key={activeSkill.item_title}>
-            {
-              activeSkill.is_active &&
-              <motion.div  className={styles.skill_project}
-              initial={{ scale: 0 }}
-              animate={{ rotate: 360, scale: 1 }}
-              exit={{ scale: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 20
-              }}>
-                <img src={activeSkill.item_url} alt={`icono de habilidad ${activeSkill.item_title}`} />
-              </motion.div>
-            }
-          </AnimatePresence>
-        ))}
+    <article className={styles.project_slide}>
+      <div className={styles.project_slide_mobile_header}>
+        <p className={styles.project_kicker}>Proyecto destacado</p>
+        <h2>{title}</h2>
       </div>
 
-      <div className={styles.item_project}>
-        <div className={styles.img_container}>
-          <img src={image_url} alt={`imagen de proyecto ${title}`} loading="lazy"/>
-          <div className={styles.description_container}>
-            <p>{description}</p>
-            <p>Mi Aporte: {role}</p>
-          </div>
+      <div className={styles.project_slide_copy}>
+        <p className={styles.project_kicker}>Proyecto destacado</p>
+        <h2>{title}</h2>
+        <p className={styles.project_description}>{description}</p>
+
+        <div className={styles.project_meta}>
+          <span className={styles.project_meta_label}>Mi aporte</span>
+          <p>{role}</p>
         </div>
-        <h1>{title}</h1>
+
+        <div
+          className={styles.project_tags}
+          aria-label="Tecnologías utilizadas"
+        >
+          {skillsUsed.map((skill) => (
+            <span key={skill} className={styles.project_tag}>
+              {skill}
+            </span>
+          ))}
+        </div>
+
+        <a
+          href={project_url}
+          className={styles.project_link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver proyecto
+        </a>
       </div>
-    </a>
-  )
+
+      <div className={styles.project_slide_media}>
+        <img
+          src={image_url}
+          alt={`Captura del proyecto ${title}`}
+          loading="lazy"
+        />
+      </div>
+    </article>
+  );
 }

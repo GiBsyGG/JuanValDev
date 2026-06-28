@@ -1,5 +1,5 @@
 ---
-interface Props{
+interface Props {
   icon_url: string;
   title: string;
 }
@@ -20,9 +20,10 @@ const { icon_url, title } = Astro.props;
     align-items: center;
     width: 160px;
     height: 240px;
-    border: solid  4px var(--white-light);
+    border: solid 4px var(--white-light);
     border-radius: 12px;
     transition: all 0.5s;
+    padding: 12px;
   }
 
   img {
@@ -36,6 +37,7 @@ const { icon_url, title } = Astro.props;
     font-size: 2.4rem;
     font-weight: 600;
     letter-spacing: 2px;
+    text-align: center;
   }
 
   div:hover > img {
@@ -47,25 +49,31 @@ const { icon_url, title } = Astro.props;
   }
 
   /*For animation*/
-  div:hover{
+  div:hover {
     cursor: default;
     transform: scale(1.1);
     --border-angle: 0turn;
     --main-bg: conic-gradient(
-        from var(--border-angle),
-        var(--background-color) 0%,
-        var(--background-color)5%,
-        var(--background-color) 60%,
-        var(--background-color) 95%
-      );
-    
+      from var(--border-angle),
+      var(--background-color) 0%,
+      var(--background-color) 5%,
+      var(--background-color) 60%,
+      var(--background-color) 95%
+    );
+
     border: solid 5px transparent;
     border-radius: 2em;
-    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, var(--white-light), var(--white-light) 99%, transparent);
-    
-    background: 
+    --gradient-border: conic-gradient(
+      from var(--border-angle),
+      transparent 25%,
+      var(--white-light),
+      var(--white-light) 99%,
+      transparent
+    );
+
+    background:
       var(--main-bg) padding-box,
-      var(--gradient-border) border-box, 
+      var(--gradient-border) border-box,
       var(--main-bg) border-box;
 
     animation: bg-spin 3s linear infinite;
@@ -77,11 +85,9 @@ const { icon_url, title } = Astro.props;
     }
   }
 
-
-@property --border-angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0turn;
-}
-
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
 </style>
